@@ -134,6 +134,22 @@ app.delete("/api/v1/content", middleware_1.authMiddleWare, function (req, res) {
         }
     });
 });
+// app.post("/api/v1/search",authMiddleWare,async function(req,res){
+//     const userId = req.userId;
+//     const title =req.body.term
+//     try {
+//         const searchContent = await ContentsModel.findOne({
+//             title: title ,
+//             userId: userId
+//         })
+//         if (!searchContent) {
+//             res.status(404).json({ message: "Incorrect Content Title" });
+//         }
+//         res.json({ searchContent })
+//     } catch (e: any) {
+//         res.status(500).json({ message: "Error finding content", error: e.message });
+//     }
+// })
 app.get("/api/v1/allyoutube", middleware_1.authMiddleWare, function (req, res) {
     return __awaiter(this, void 0, void 0, function* () {
         const userId = req.userId;
